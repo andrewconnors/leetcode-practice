@@ -21,9 +21,9 @@ def are_they_equal(array_a, array_b):
     else:
       return False
   
-  for item in contains_map.keys():
-    if contains_map[item] < 0:
+  if len(array_a) != len(array_b):
       return False
+      
   return True
 
 
