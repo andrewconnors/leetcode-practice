@@ -12,11 +12,11 @@ def check_for_cycle(head):
     fast_pointer = head.next
 
     while fast_pointer != None and fast_pointer.next != None:
-        if slow_pointer == fast_pointer:
-            return True
-        
         slow_pointer = slow_pointer.next
         fast_pointer = fast_pointer.next.next
+
+        if slow_pointer == fast_pointer:
+            return True
     
     return False
 
